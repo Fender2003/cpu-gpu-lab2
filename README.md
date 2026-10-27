@@ -139,3 +139,15 @@ python gpu_demo_frames.py reverse cpu_demo_obfuscated_gpu cpu_demo_reconstructed
   --manifest cpu_demo_gpu_manifest.json --batch-size 3
 ```
 4. Verify things are identical: `python gpu_demo_frames.py verify cpu_demo_input cpu_demo_reconstructed_gpu`
+
+
+## Times
+1. GPU
+Inverse compute total time: 62.8820 s
+Inverse compute throughput: 6.06 img/s
+Output save total time: 129.2251 s
+
+2. CPU
+Inverse compute total time: 2800.3565 s
+Inverse compute throughput: 0.14 img/s
+Output save total time: 125.2385 s

@@ -109,12 +109,18 @@ def stage_inverse(x, yy, xx, cc, stage, substeps):
         add_s = (add_key + 37 * s) % 256
 
         # TODO 1: undo channel permutation
+        x = x[..., inv_perm]
 
         # TODO 2: undo modular addition
+        x = ((x.to(torch.int16) - add_s) & 255).to(torch.uint8)
 
         # TODO 3: recreate same mask and undo XOR
+        mask = make_mask(yy, xx, cc, xor_seed_s)
+        x = torch.bitwise_xor(x, mask)
 
         # TODO 4: undo horizontal and vertical rolls
+        x = torch.roll(x, shifts=-dx_s, dims=2)
+        x = torch.roll(x, shifts=-dy_s, dims=1)
 
     return x
 
