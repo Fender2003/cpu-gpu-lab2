@@ -2,3 +2,6 @@
 env/
 frames/
 first_session_07_04_2026/
+venv/
+out_reconstructed_cpu/
+out_reconstructed_cuda/
