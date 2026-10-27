@@ -143,11 +143,11 @@ python gpu_demo_frames.py reverse cpu_demo_obfuscated_gpu cpu_demo_reconstructed
 
 ## Times
 1. GPU
-Inverse compute total time: 62.8820 s
-Inverse compute throughput: 6.06 img/s
+Inverse compute total time: 62.8820 s\n
+Inverse compute throughput: 6.06 img/s\n
 Output save total time: 129.2251 s
 
 2. CPU
-Inverse compute total time: 2800.3565 s
-Inverse compute throughput: 0.14 img/s
+Inverse compute total time: 2800.3565 s\n
+Inverse compute throughput: 0.14 img/s\n
 Output save total time: 125.2385 s
